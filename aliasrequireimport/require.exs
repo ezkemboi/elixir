@@ -3,9 +3,10 @@ macros is used for meta-programming(writing code that generate code)
 Public functions inside module are globally available, but to use macros, 
 we need to require them. 
 """
-require Integer
 
 defmodule UsingRequireDemo do
+    # allow usage macros inside this module
+    require Integer
     def is_no_odd(number) do
         Integer.is_odd(number)
     end
